@@ -14,6 +14,8 @@ import warnings
 warnings.filterwarnings('ignore', category=UserWarning)
 epsilon = 1e-12
 
+### misc helper functions 
+
 def sample_hypersphere(n_dimensions, radius, n_samples_in_sphere, radius_qmc_sequence):
     '''
     Objective:
@@ -174,6 +176,8 @@ def fit_pca_for_cluster(cluster_samples, current_origin, initial_samples_std, n_
                 'components': np.eye(n_dimensions), 
                 'variances': fixed_variance}
 
+
+# main sample function
 
 def sample(n_samples, bounds,
            weights=None, normalize=False,
